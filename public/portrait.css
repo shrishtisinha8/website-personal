@@ -1,0 +1,104 @@
+/* The supplied illustration is reused intact; the full illustration fits inside the circular logo without cropping. */
+.brand-mark.portrait-logo {
+  display: block;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  overflow: visible;
+  border: 1px solid #c8bfd0;
+  border-radius: 50%;
+  background: #f9f7e7;
+}
+.portrait-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.site-footer .brand-mark.portrait-logo {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+}
+.portrait-art { margin: 0; }
+.portrait-frame {
+  background: #f9f7e7;
+  border-color: #d5ccd7;
+  border-radius: 18px;
+}
+.portrait-frame::after { display: none; }
+.portrait-frame .art-label {
+  top: 38px;
+  color: #6d527c;
+  z-index: 1;
+}
+.portrait-image {
+  display: block;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 115px);
+  object-fit: contain;
+}
+.portrait-caption {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  color: #624477;
+  font: italic 17px/1.4 var(--serif);
+}
+.portrait-signature { font-size: 27px; letter-spacing: -1px; }
+@media (max-width: 850px) {
+  .brand-mark.portrait-logo { width: 46px; height: 46px; }
+  .portrait-frame .art-label { top: 29px; font-size: 7px; }
+  .portrait-image { top: 37px; height: calc(100% - 90px); }
+  .portrait-caption { left: 22px; right: 22px; bottom: 18px; font-size: 14px; }
+  .portrait-signature { font-size: 23px; }
+}
+@media (max-width: 680px) {
+  .brand-mark.portrait-logo { width: 46px; height: 46px; }
+  .portrait-art { padding-top: 0; margin-inline: auto; }
+  .portrait-frame .art-label { top: 25px; }
+  .portrait-image { top: 34px; height: calc(100% - 86px); }
+  .portrait-caption { left: 24px; right: 24px; bottom: 16px; font-size: 15px; }
+  .portrait-signature { font-size: 24px; }
+  .portrait-art .art-footnote { font-size: 6px; letter-spacing: 1.2px; }
+}
+
+/* Content added through content.js. */
+[hidden] { display: none !important; }
+.portfolio-entry + .portfolio-entry {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.portfolio-entry h3 { font-size: 22px; margin-bottom: 10px; }
+.writing-posts { border-top: 1px solid #c9c1d1; }
+.writing-post { border-bottom: 1px solid #c9c1d1; }
+.writing-post summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 28px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.writing-post summary::-webkit-details-marker { display: none; }
+.writing-post summary h3 { font-size: 28px; }
+.post-toggle { color: var(--purple); font-size: 24px; }
+.writing-post[open] .post-toggle { transform: rotate(45deg); }
+.post-body { max-width: 760px; padding-bottom: 24px; }
+.post-body p { font-size: 14px; color: var(--muted); white-space: pre-line; }
+.post-body .eyebrow { font-size: 10px; color: var(--purple); }
+.post-body .post-excerpt { font-family: var(--serif); font-size: 20px; color: var(--ink); }
+@media (max-width: 680px) {
+  .writing-post summary h3 { font-size: 24px; }
+}
