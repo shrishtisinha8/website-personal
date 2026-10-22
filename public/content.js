@@ -3,7 +3,7 @@
 window.siteContent = {
   calendlyUrl: 'https://calendly.com/shrishtisinha/introductory-call-shrishti',
   // Put your PDF in assets, then change this to 'assets/resume.pdf'.
-  resumeUrl: '',
+  resumeUrl: 'assets/Resume_ShrishtiSinha_.pdf',
   email: 'shrishtisinha84@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/shrishti-sinha/',
 
