@@ -134,7 +134,7 @@
 .section-top { margin-bottom: 26px; }
 .section-top .eyebrow, .section-intro .eyebrow { margin-bottom: 12px; }
 .hero { padding-block: 42px; gap: 36px; grid-template-columns: 1.2fr .85fr; }
-.hero h1 { font-size: clamp(56px, 5.8vw, 76px); line-height: 1.05; margin-bottom: 20px; letter-spacing: -3px; }
+.hero h1 { font-size: clamp(46px, 4.7vw, 62px); line-height: 1.08; margin-bottom: 20px; letter-spacing: -2px; }
 .hero .eyebrow { font-size: 14px; letter-spacing: 1px; margin-bottom: 16px; }
 .hero-description { font-size: 16px; line-height: 1.7; max-width: 520px; margin-bottom: 16px; }
 .hero-actions { margin-top: 20px; }
@@ -190,7 +190,7 @@
 .booking-card { padding: 24px; }
 .site-footer { padding-block: 24px; }
 @media (max-width: 850px) {
-  .hero h1 { font-size: 54px; }
+  .hero h1 { font-size: 48px; }
   .about { gap: 28px; }
   .interest-grid { gap: 14px; }
   .interest-card { padding: 18px; }
@@ -201,7 +201,7 @@
   .section-spacing { padding-block: 36px; }
   .section-top { margin-bottom: 22px; }
   .hero { grid-template-columns: 1fr; padding-block: 28px; gap: 24px; }
-  .hero h1 { font-size: clamp(42px, 11.5vw, 60px); letter-spacing: -2px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(36px, 8.8vw, 46px); letter-spacing: -1.5px; margin-bottom: 18px; }
   .hero .eyebrow { font-size: 14px; letter-spacing: .8px; margin-bottom: 12px; }
   .hero-actions { margin-top: 18px; gap: 20px; }
   .hero-art { width: min(100%, 350px); }
