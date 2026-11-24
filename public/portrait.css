@@ -257,3 +257,50 @@
   .experience-highlights, .detail-points { padding-left: 20px; }
   .experience-detail > summary { align-items: flex-start; }
 }
+
+/* Put employers and dates ahead of role titles in the experience hierarchy. */
+.row-body .experience-entry > h3 {
+  font: 600 22px/1.4 var(--sans);
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+.row-body .experience-entry .experience-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.experience-role { color: var(--purple); font-size: 18px; font-weight: 500; }
+.experience-dates { color: var(--muted); font-size: 16px; font-weight: 500; }
+.method-reference { display: inline-block; white-space: normal; overflow-wrap: anywhere; }
+.experience-detail-body .method-context { margin: 16px 0 10px; }
+
+/* A compact account of working style alongside the professional background. */
+.working-style {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+.approach-intro { margin-bottom: 16px; }
+.approach-intro .eyebrow { font-size: 14px; margin-bottom: 6px; }
+.approach-intro h3 { font: 600 24px/1.4 var(--sans); }
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.approach-grid li { border-left: 2px solid #b5a0ca; padding-left: 14px; }
+.approach-grid h4 { font: 600 16px/1.5 var(--sans); margin: 0 0 5px; color: var(--ink); }
+.approach-grid p { font-size: 16px; line-height: 1.65; color: var(--muted); margin: 0; }
+@media (max-width: 680px) {
+  .working-style { padding-top: 20px; }
+  .approach-grid { grid-template-columns: 1fr; gap: 16px; }
+  .row-body .experience-entry > h3 { font-size: 21px; }
+  .experience-role { font-size: 17px; }
+}
