@@ -2,6 +2,12 @@
 
 You can update this website by editing a few plain text files. Use a code editor, or a text editor in plain-text mode. Do not use Word or a rich-text document to edit code.
 
+## Current GitHub workflow
+
+Edit `public/content.js` for your bio and external article links. The dated roles, focus areas, and “What’s next” text are in `public/index.html`. Commit changes to `main` (or merge a pull request into `main`) to trigger GitHub Pages and your connected Vercel deployment.
+
+The current résumé file is `public/assets/Resume_ShrishtiSinha_.pdf`. Replace it with your next PDF, then update the version after `?v=` in `resumeUrl` so browsers load the replacement. The same photo is used in the main portrait and in the photo-based SVG logo/browser icon.
+
 ## Which file does what?
 
 | File inside `public` | What you change there |
@@ -37,7 +43,7 @@ Your existing Calendly, email, and LinkedIn links are already filled in. To chan
 
 To change the homepage headline or interests, open `index.html`, search for the exact visible words, and replace the text between the HTML tags. Keep tags such as `<h1>`, `<p>`, and `<br>`.
 
-## Add a project or a role
+## Add an external article or work sample
 
 Replace `work: []` with a list like this, using your real information:
 
@@ -53,11 +59,11 @@ work: [
 
 Leave `url` empty if you do not have a link. Otherwise use a full HTTPS address, or a path to a file in `assets`. Add another object after the first one to add more entries; separate objects with a comma.
 
-Entries appear inside “Projects & experience.” The site will keep the coming-soon message if the list stays empty.
+Entries appear under “Articles & explainers” inside Work & résumé. Each item can also include an optional `linkLabel`, such as `Read blog post`. Edit the dated experience entries in `public/index.html`.
 
-## Publish writing
+## Optional: publish longer on-site writing
 
-Replace `writing: []` with a list like this. The example below is a template, not an article already on your site:
+Keep external blog posts in `work` so they appear once under Articles & explainers. The separate writing section stays hidden while `writing` is empty. To publish a longer piece directly on this website, replace `writing: []` with a list like this. The example below is a template, not an article already on your site:
 
 ```js
 writing: [
