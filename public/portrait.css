@@ -72,6 +72,29 @@
   .portrait-art .art-footnote { font-size: 6px; letter-spacing: 1.2px; }
 }
 
+/* Full photograph in the hero; the illustrated logo styles above stay separate. */
+.photo-art .portrait-frame {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  aspect-ratio: auto;
+  background: #fff;
+}
+.photo-art .art-label { position: static; }
+.photo-art .portrait-image {
+  position: static;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.photo-art .portrait-caption { position: static; }
+@media (max-width: 680px) {
+  .photo-art .portrait-frame { padding: 18px; gap: 14px; }
+}
+
 /* Content added through content.js. */
 [hidden] { display: none !important; }
 .portfolio-entry + .portfolio-entry {
@@ -80,6 +103,9 @@
   border-top: 1px solid var(--line);
 }
 .portfolio-entry h3 { font-size: 22px; margin-bottom: 10px; }
+.row-body .experience-meta { color: var(--purple); font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+.row-body .portfolio-entry > p:not(.experience-meta) { font-size: 16px; line-height: 1.75; }
+.row-body .portfolio-entry > p + p { margin-top: 12px; }
 .writing-posts { border-top: 1px solid #c9c1d1; }
 .writing-post { border-bottom: 1px solid #c9c1d1; }
 .writing-post summary {
