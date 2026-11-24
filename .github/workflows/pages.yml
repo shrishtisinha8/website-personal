@@ -15,10 +15,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  upload:
+    name: Upload website files
     runs-on: ubuntu-latest
     steps:
       - name: Check out website source
@@ -29,6 +27,15 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+
+  deploy:
+    name: Publish website
+    needs: upload
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v5
