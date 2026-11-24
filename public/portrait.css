@@ -218,3 +218,42 @@
   .connect-inner { padding-block: 36px; gap: 24px; }
   .site-footer { padding-block: 20px; gap: 14px; }
 }
+
+/* Optional project detail preserves the compact experience overview. */
+.experience-highlights, .detail-points {
+  padding-left: 21px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 80ch;
+}
+.experience-highlights li + li, .detail-points li + li { margin-top: 9px; }
+.experience-detail {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.experience-detail > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  color: var(--purple);
+  font: 600 14px/1.5 var(--sans);
+  letter-spacing: 0;
+  cursor: pointer;
+  list-style: none;
+}
+.experience-detail > summary::-webkit-details-marker { display: none; }
+.detail-toggle { font-size: 22px; font-weight: 400; line-height: 1; flex-shrink: 0; }
+.experience-detail[open] > summary .detail-toggle { transform: rotate(45deg); }
+.experience-detail-body { padding-top: 4px; }
+.experience-detail-body h4 { font: 600 16px/1.5 var(--sans); color: var(--ink); margin: 14px 0 8px; }
+.experience-detail-body p { font-size: 16px; line-height: 1.75; max-width: 80ch; margin-bottom: 14px; }
+.experience-detail-body .text-link { font-size: 14px; margin-top: 3px; }
+@media (max-width: 680px) {
+  .experience-highlights, .detail-points { padding-left: 20px; }
+  .experience-detail > summary { align-items: flex-start; }
+}
