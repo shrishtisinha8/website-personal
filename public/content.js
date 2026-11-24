@@ -2,7 +2,7 @@
 // Optional longer on-site articles can be added to writing; keep [] to show only the work samples above.
 window.siteContent = {
   "calendlyUrl": "https://calendly.com/shrishtisinha/introductory-call-shrishti",
-  "resumeUrl": "assets/Resume_ShrishtiSinha_.pdf",
+  "resumeUrl": "assets/Resume_ShrishtiSinha_.pdf?v=20261124",
   "email": "shrishtisinha84@gmail.com",
   "linkedinUrl": "https://www.linkedin.com/in/shrishti-sinha/",
   "aboutParagraphs": [
