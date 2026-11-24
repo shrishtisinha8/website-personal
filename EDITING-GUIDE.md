@@ -59,11 +59,11 @@ work: [
 
 Leave `url` empty if you do not have a link. Otherwise use a full HTTPS address, or a path to a file in `assets`. Add another object after the first one to add more entries; separate objects with a comma.
 
-Entries appear under “Articles & explainers” inside Work & résumé. Each item can also include an optional `linkLabel`, such as `Read blog post`. Edit the dated experience entries in `public/index.html`.
+Entries appear under “Writing & analysis” inside Work & résumé. Each item can also include an optional `linkLabel`, such as `Read blog post`. Edit the dated experience entries in `public/index.html`.
 
 ## Optional: publish longer on-site writing
 
-Keep external blog posts in `work` so they appear once under Articles & explainers. The separate writing section stays hidden while `writing` is empty. To publish a longer piece directly on this website, replace `writing: []` with a list like this. The example below is a template, not an article already on your site:
+Keep external blog posts in `work` so they appear once under Writing & analysis. The separate writing section stays hidden while `writing` is empty. To publish a longer piece directly on this website, replace `writing: []` with a list like this. The example below is a template, not an article already on your site:
 
 ```js
 writing: [
