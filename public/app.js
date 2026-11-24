@@ -56,7 +56,7 @@ if (calendlyUrl) {
 const resumeUrl = safeUrl(content.resumeUrl, 'resume');
 if (resumeUrl) {
   enableLink('resume-link', resumeUrl, 'View my résumé', '↗');
-  document.querySelector('.resume-card > p:not(.eyebrow)').textContent = 'A closer look at my experience, skills, and journey.';
+  document.querySelector('.resume-card > p:not(.eyebrow)').textContent = 'Experience, research and contributions from my work so far.';
 }
 const contacts = document.getElementById('contact-links');
 function appendContact(label, href, external) {
@@ -101,7 +101,7 @@ if (work.length) {
     if (url) {
       const link = document.createElement('a');
       link.className = 'text-link';
-      link.textContent = 'Read more ↗';
+      link.textContent = 'View published work';
       link.href = url.href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
