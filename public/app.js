@@ -55,8 +55,8 @@ if (calendlyUrl) {
 }
 const resumeUrl = safeUrl(content.resumeUrl, 'resume');
 if (resumeUrl) {
-  enableLink('resume-link', resumeUrl, 'View my résumé', '↗');
-  document.querySelector('.resume-card > p:not(.eyebrow)').textContent = 'Experience, research and contributions from my work so far.';
+  enableLink('resume-link', resumeUrl, 'View my résumé', '');
+  document.getElementById('resume-description').textContent = 'Roles, research and results, with the details behind my work.';
 }
 const contacts = document.getElementById('contact-links');
 function appendContact(label, href, external) {
@@ -101,7 +101,7 @@ if (work.length) {
     if (url) {
       const link = document.createElement('a');
       link.className = 'text-link';
-      link.textContent = 'View published work';
+      link.textContent = typeof item.linkLabel === 'string' && item.linkLabel.trim() ? item.linkLabel : 'Read blog post';
       link.href = url.href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
@@ -113,6 +113,7 @@ if (work.length) {
 
 const posts = Array.isArray(content.writing) ? content.writing.filter(item => item && typeof item.title === 'string' && item.title.trim() && ((typeof item.body === 'string' && item.body.trim()) || safeUrl(item.url, 'content'))) : [];
 if (posts.length) {
+  document.querySelector('.writing-section').hidden = false;
   const container = document.getElementById('writing-posts');
   document.getElementById('writing-empty').hidden = true;
   const status = document.querySelector('.writing-section .section-top .small-tag');

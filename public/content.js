@@ -1,39 +1,29 @@
-// EDIT YOUR CONTENT HERE. Commit changes to main to publish through GitHub Pages.
-// Keep the quotation marks, commas, and square brackets. Examples are in the editing guide.
+// Edit your profile and external work samples here. Commit to main to publish.
+// Optional longer on-site articles can be added to writing; keep [] to show only the work samples above.
 window.siteContent = {
-  calendlyUrl: 'https://calendly.com/shrishtisinha/introductory-call-shrishti',
-  // Put your PDF in assets, then change this to 'assets/resume.pdf'.
-  resumeUrl: 'assets/Resume_ShrishtiSinha_.pdf',
-  email: 'shrishtisinha84@gmail.com',
-  linkedinUrl: 'https://www.linkedin.com/in/shrishti-sinha/',
-
-  // Each item becomes a paragraph in About me.
-  aboutParagraphs: [
-    'I’m Shrishti Sinha, an eager and constant learner who wants to contribute to meaningful causes.',
-    'I’m passionate about climate sciences and accelerating climate action. I’m drawn to work that makes a difference, and I’m actively looking for opportunities in strategy and growth.',
-    'Music is a big part of my life, too. I’m a vocalist, play a little guitar, and recently started learning the drums. There’s always something new to learn.'
+  "calendlyUrl": "https://calendly.com/shrishtisinha/introductory-call-shrishti",
+  "resumeUrl": "assets/Resume_ShrishtiSinha_.pdf",
+  "email": "shrishtisinha84@gmail.com",
+  "linkedinUrl": "https://www.linkedin.com/in/shrishti-sinha/",
+  "aboutParagraphs": [
+    "I’m a research and analytics professional with 2+ years of combined experience across banking, biodiversity research and climate sciences.",
+    "At Wells Fargo, I worked on fraud-model evaluation, risk modelling and validation workflows. My research at UCL and Max Planck focused on biodiversity responses to environmental change and population dynamics.",
+    "I contribute to research-driven resources for the carbon removal sector through CDR.fyi. I hold an integrated M.Sc. (Hons.) in Biological Sciences and B.E. (Hons.) in Electronics & Instrumentation Engineering from BITS Pilani.",
+    "Outside work, I enjoy music."
   ],
-
-  // Add projects or roles here. Each item uses title, detail, and an optional url.
-  // Leave [] until you have work you want to show.
-  work: [
+  "work": [
     {
-      title: "Carbon credits and carbon removal",
-      detail: "Published a Substack analysis of how carbon credits and durable carbon removal connect to business risk, procurement, investor expectations and long-term strategy.",
-      url: "https://shrishtisposts.substack.com/p/why-carbon-credits-and-carbon-removal"
+      "title": "Carbon credits and carbon removal",
+      "detail": "Blog post on analysis of how carbon credits and durable carbon removal connect to business risk, procurement, investor expectations and long-term strategy.",
+      "url": "https://shrishtisposts.substack.com/p/why-carbon-credits-and-carbon-removal",
+      "linkLabel": "Read Substack post"
+    },
+    {
+      "title": "Types of CDR purchases",
+      "detail": "Co-authored with Alexander Rink for CDR.fyi. A blog post explaining spot, forward, pre-purchase and offtake structures, and the delivery, payment and risk trade-offs buyers need to consider.",
+      "url": "https://www.cdr.fyi/blog/types-of-cdr-purchases-buyers-guide#download",
+      "linkLabel": "Read CDR.fyi post"
     }
   ],
-
-  // Add articles here. Each item uses title, date, excerpt, body, and an optional url.
-  // body is plain text; separate paragraphs with a blank line inside backticks.
-  // Leave [] to keep the coming-soon message.
-  writing: [
-    {
-      title: "Why Carbon Credits and Carbon Removal Are Becoming a Strategic Necessity for Businesses",
-      date: "June 1, 2026",
-      excerpt: "An exploration of carbon markets and durable removal through the lens of corporate risk, supply constraints and business strategy.",
-      body: "",
-      url: "https://shrishtisposts.substack.com/p/why-carbon-credits-and-carbon-removal"
-    }
-  ]
+  "writing": []
 };
