@@ -26,34 +26,32 @@ body { font-size: 16px; background: #fcfbfe; }
 .education-degrees { font-size: 16px; line-height: 1.65; color: #51435f; margin: 0; }
 .education-award { border-left: 1px solid #cbb7dd; padding-left: 24px; }
 .education-award .eyebrow { font-size: 14px; letter-spacing: 1px; margin-bottom: 6px; color: #604471; }
-.education-award > p:last-child { font: 500 22px/1.4 var(--serif); color: #482662; margin: 0; }
-.work-section { --ink: #faf6ff; --muted: #d9cfe3; --purple: #d9b9ff; --line: #594467; color: var(--ink); background: #251930; border-color: #493453; }
-.work-section h2 { color: #faf6ff; }
-.work-section .eyebrow, .work-section .row-number { color: #c7afd9; }
-.work-section .work-rows, .work-section .work-row { border-color: #594467; }
-.work-section .expand-icon { color: #dcc0f5; }
-.work-section .resume-card.resume-summary { background: #352541; border-color: #685174; }
-.work-section .resume-summary .button { background: #dec7f7; color: #2d183c; border-color: #dec7f7; }
-.work-section .resume-summary .button:hover { background: #eedcff; }
-.work-section .text-link { border-color: #846596; }
-.work-section .text-link:hover { color: #f0dfff; }
-.work-section #work-portfolio .portfolio-entry { background: #32223e; border-color: #624b71; }
-.work-section a:focus-visible, .work-section summary:focus-visible { outline-color: #dfb9ff; }
+.education-thesis { font-size: 16px; line-height: 1.65; color: #51435f; margin: 10px 0 0; }
+.education-award .award-title { font: 500 22px/1.4 var(--serif); color: #482662; margin: 0 0 8px; }
+.education-award .award-issuer, .education-award .award-context { font-size: 16px; line-height: 1.6; color: #51435f; margin: 0; }
+.education-award .award-context { margin-top: 10px; }
+.work-section { background: #ffffff; border-color: #ded2e7; }
+.work-section .resume-card.resume-summary { background: #f2edf8; border-color: #cfc0dc; }
+.work-section .resume-summary .button { background: #5b2f83; color: #ffffff; border-color: #5b2f83; }
+.work-section .resume-summary .button:hover { background: #45205f; }
+.work-section #work-portfolio .portfolio-entry { background: #faf7fe; border-color: #d8c9e4; }
 .focus-stage { background: #eae1f4; border-bottom: 1px solid #cfbde0; }
 .interest-card, .interest-card:nth-child(2), .interest-card:nth-child(3) { background: #fcfaff; border-color: #c9b6da; }
 .interest-card h3 { color: #352044; }
 .interest-tags span { color: #59416c; border-color: #cbb7dc; background: #f4eef9; }
-.cdr-review-note { display: grid; grid-template-columns: .72fr 2fr; gap: 22px; align-items: start; margin-top: 22px; padding-top: 22px; border-top: 1px solid #c4afd5; }
-.cdr-review-note h3 { font: 600 18px/1.5 var(--sans); color: #3c2451; }
-.cdr-review-note p { margin: 0; font-size: 16px; line-height: 1.75; color: #51435f; }
-.connect-section { background: #fcfbfe; color: #24192f; }
-.connect-copy h2 { color: #24192f; }
-.connect-copy h2 em { color: #603184; }
-.connect-copy .eyebrow { color: #654b79; }
-.connect-copy > p:not(.eyebrow) { color: #5a4c65; }
-.booking-card { border-color: #c6b3d7; background: #f1e9f8; }
-.connect-flower { color: #7e50a4; }
-.site-footer { border-top: 1px solid #ded2e7; }
+.roles-interest-note { display: grid; grid-template-columns: .72fr 2fr; gap: 22px; align-items: start; margin-top: 22px; padding-top: 22px; border-top: 1px solid #c4afd5; }
+.roles-interest-note h3 { font: 600 18px/1.5 var(--sans); color: #3c2451; }
+.roles-interest-note p { margin: 0; font-size: 16px; line-height: 1.75; color: #51435f; }
+.connect-section, .footer-stage { background: #251930; color: #faf6ff; }
+.connect-copy h2 { color: #faf6ff; }
+.connect-copy h2 em { color: #d9b9ff; }
+.connect-copy .eyebrow { color: #c7afd9; }
+.connect-copy > p:not(.eyebrow) { color: #d9cfe3; }
+.booking-card { border-color: #d6c6e3; background: #fcfaff; }
+.connect-flower { color: #bd96db; }
+.site-footer { border-top: 1px solid #594467; }
+.site-footer > p, .footer-meta { color: #d9cfe3; }
+.footer-meta > a { border-color: #7e688d; }
 .button, .text-link, nav, .booking-card .button, .booking-card > p:not(.booking-note), .contact-links { font-size: 16px; }
 .booking-note { font-size: 14px; }
 .booking-top span { font-size: 13px; }
@@ -68,7 +66,8 @@ body { font-size: 16px; background: #fcfbfe; }
   nav { font-size: 16px; }
   .education-strip { grid-template-columns: 1fr; gap: 16px; }
   .education-award { border-left: 0; border-top: 1px solid #cbb7dd; padding: 14px 0 0; }
-  .education-award > p:last-child { font-size: 21px; }
-  .cdr-review-note { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; padding-top: 18px; }
+  .education-award .award-title { font-size: 21px; }
+  .roles-interest-note { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; padding-top: 18px; }
 }
 @media (prefers-reduced-motion: reduce) { .ambient-orb { animation: none; will-change: auto; } .portrait-motion { display: none; } }
+

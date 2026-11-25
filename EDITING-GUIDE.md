@@ -103,8 +103,8 @@ Overleaf is a LaTeX document editor. Keep the website's HTML, CSS, and JavaScrip
 [Overleaf overview](https://docs.overleaf.com/getting-started/how-do-i-use-overleaf) · [PDF download instructions](https://docs.overleaf.com/managing-projects-and-files/downloading-a-project)
 
 
-## Education, CDR familiarity and the background
+## Education, next roles and the background
 
-The compact education and INSPIRE Scholarship section is in `public/index.html`, under `education`. The CDR project-review familiarity text is under `cdr-review-title` in the same file. Keep specific standards and experience claims limited to those you can support.
+The education, final-year master’s thesis and INSPIRE Scholarship details are in `public/index.html`, under `education`. The next-role interests are under `next-roles-title` in the same file. The dated University College London entry also identifies the master’s thesis and research group. Keep ranks and experience claims accurate.
 
 Section colors and the ambient introduction background are in `public/theme.css`. Visitors can pause the background; it stays still automatically if their device requests reduced motion. To disable the animation for everyone, add `.ambient-orb { animation: none; }` at the end of that file.
