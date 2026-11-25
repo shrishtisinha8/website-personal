@@ -4,7 +4,8 @@ body { font-size: 16px; background: #fcfbfe; }
 .hero-stage { background: #f3eefb; }
 .hero { position: relative; padding-block: 44px 32px; }
 .hero-description { color: #51435f; }
-.photo-art .portrait-frame { background: #ffffffa6; border-color: #baa6d0; box-shadow: 0 14px 44px #3d215012; }
+.photo-art .portrait-frame { background: #ffffffa6; border-color: #baa6d0; border-radius: 50%; aspect-ratio: 1; box-shadow: 0 14px 44px #3d215012; }
+.photo-art .portrait-image { border-radius: 50%; object-fit: cover; }
 .skills-ribbon { background: #e3d6f2; color: #382047; border-color: #c4afd7; }
 .about { background: #fcfbfe; }
 .education-strip { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; gap: 22px; align-items: center; padding: 20px 24px; background: #f0e9f8; border: 1px solid #d4c3e4; border-radius: 10px; }
