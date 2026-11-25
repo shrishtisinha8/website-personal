@@ -166,3 +166,20 @@ if (posts.length) {
   });
   container.hidden = false;
 }
+
+
+// Keep ambient motion optional and respect the visitor's system preference.
+const backgroundToggle = document.getElementById('background-toggle');
+const heroStage = document.querySelector('.hero-stage');
+if (backgroundToggle && heroStage) {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const syncMotionControl = () => { backgroundToggle.hidden = reducedMotion.matches; };
+  syncMotionControl();
+  reducedMotion.addEventListener('change', syncMotionControl);
+  backgroundToggle.addEventListener('click', () => {
+    const paused = backgroundToggle.getAttribute('aria-pressed') !== 'true';
+    heroStage.dataset.motion = paused ? 'paused' : 'playing';
+    backgroundToggle.setAttribute('aria-pressed', String(paused));
+    backgroundToggle.textContent = paused ? 'Resume background' : 'Pause background';
+  });
+}

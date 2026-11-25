@@ -1,0 +1,74 @@
+/* Clear section changes, with a quiet ambient background for the introduction. */
+body { font-size: 16px; background: #fcfbfe; }
+.site-header { background: rgba(252, 251, 254, .96); }
+.hero-stage { position: relative; isolation: isolate; overflow: hidden; background: #f3eefb; }
+.hero-atmosphere { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
+.ambient-orb { position: absolute; width: 68rem; height: 68rem; border-radius: 50%; will-change: transform; }
+.orb-one { top: -48rem; left: -13rem; background: radial-gradient(circle, #b28bdb99 0, #d8c4ef66 42%, transparent 68%); animation: drift-one 24s ease-in-out infinite alternate; }
+.orb-two { right: -34rem; bottom: -47rem; background: radial-gradient(circle, #9670cc88 0, #c6afe84d 43%, transparent 68%); animation: drift-two 28s ease-in-out infinite alternate; }
+.ambient-grid { position: absolute; inset: 0; opacity: .2; background-image: linear-gradient(#9e88b12e 1px, transparent 1px), linear-gradient(90deg, #9e88b12e 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(90deg, transparent 15%, #000 100%); }
+.hero { position: relative; padding-block: 44px 32px; }
+.hero-description { color: #51435f; }
+.photo-art .portrait-frame { background: #ffffffa6; border-color: #baa6d0; box-shadow: 0 14px 44px #3d215012; }
+.portrait-motion { min-height: 30px; margin-top: 8px; text-align: right; }
+.motion-toggle { padding: 4px 0 4px 10px; background: transparent; border: 0; color: #5d426f; font-size: 14px; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.motion-toggle:hover { color: #351a50; }
+.hero-stage[data-motion="paused"] .ambient-orb { animation-play-state: paused; }
+@keyframes drift-one { from { transform: translate(-3rem, 0) scale(1); } to { transform: translate(18rem, 9rem) scale(1.08); } }
+@keyframes drift-two { from { transform: translate(0, 0) scale(1); } to { transform: translate(-18rem, -7rem) scale(1.12); } }
+.skills-ribbon { background: #e3d6f2; color: #382047; border-color: #c4afd7; }
+.about { background: #fcfbfe; }
+.education-strip { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; gap: 22px; align-items: center; padding: 20px 24px; background: #f0e9f8; border: 1px solid #d4c3e4; border-radius: 10px; }
+.education-main h3 { font: 600 20px/1.4 var(--sans); margin-bottom: 8px; }
+.education-institution { display: flex; align-items: baseline; gap: 16px; margin: 0 0 6px; }
+.education-institution strong { font-size: 18px; font-weight: 600; }
+.education-institution span { font-size: 14px; color: #675571; }
+.education-degrees { font-size: 16px; line-height: 1.65; color: #51435f; margin: 0; }
+.education-award { border-left: 1px solid #cbb7dd; padding-left: 24px; }
+.education-award .eyebrow { font-size: 14px; letter-spacing: 1px; margin-bottom: 6px; color: #604471; }
+.education-award > p:last-child { font: 500 22px/1.4 var(--serif); color: #482662; margin: 0; }
+.work-section { --ink: #faf6ff; --muted: #d9cfe3; --purple: #d9b9ff; --line: #594467; color: var(--ink); background: #251930; border-color: #493453; }
+.work-section h2 { color: #faf6ff; }
+.work-section .eyebrow, .work-section .row-number { color: #c7afd9; }
+.work-section .work-rows, .work-section .work-row { border-color: #594467; }
+.work-section .expand-icon { color: #dcc0f5; }
+.work-section .resume-card.resume-summary { background: #352541; border-color: #685174; }
+.work-section .resume-summary .button { background: #dec7f7; color: #2d183c; border-color: #dec7f7; }
+.work-section .resume-summary .button:hover { background: #eedcff; }
+.work-section .text-link { border-color: #846596; }
+.work-section .text-link:hover { color: #f0dfff; }
+.work-section #work-portfolio .portfolio-entry { background: #32223e; border-color: #624b71; }
+.work-section a:focus-visible, .work-section summary:focus-visible { outline-color: #dfb9ff; }
+.focus-stage { background: #eae1f4; border-bottom: 1px solid #cfbde0; }
+.interest-card, .interest-card:nth-child(2), .interest-card:nth-child(3) { background: #fcfaff; border-color: #c9b6da; }
+.interest-card h3 { color: #352044; }
+.interest-tags span { color: #59416c; border-color: #cbb7dc; background: #f4eef9; }
+.cdr-review-note { display: grid; grid-template-columns: .72fr 2fr; gap: 22px; align-items: start; margin-top: 22px; padding-top: 22px; border-top: 1px solid #c4afd5; }
+.cdr-review-note h3 { font: 600 18px/1.5 var(--sans); color: #3c2451; }
+.cdr-review-note p { margin: 0; font-size: 16px; line-height: 1.75; color: #51435f; }
+.connect-section { background: #fcfbfe; color: #24192f; }
+.connect-copy h2 { color: #24192f; }
+.connect-copy h2 em { color: #603184; }
+.connect-copy .eyebrow { color: #654b79; }
+.connect-copy > p:not(.eyebrow) { color: #5a4c65; }
+.booking-card { border-color: #c6b3d7; background: #f1e9f8; }
+.connect-flower { color: #7e50a4; }
+.site-footer { border-top: 1px solid #ded2e7; }
+.button, .text-link, nav, .booking-card .button, .booking-card > p:not(.booking-note), .contact-links { font-size: 16px; }
+.booking-note { font-size: 14px; }
+.booking-top span { font-size: 13px; }
+.site-footer > p { font-size: 14px; }
+@media (max-width: 1100px) { nav { font-size: 14px; gap: 18px; } }
+@media (max-width: 850px) { nav { gap: 12px; } .nav-contact { padding-inline: 10px; } .education-strip { grid-template-columns: 1.6fr 1fr; padding: 20px; } .education-award { padding-left: 20px; } }
+@media (max-width: 680px) {
+  .hero { padding-block: 28px 20px; }
+  .orb-one { top: -41rem; left: -40rem; }
+  .orb-two { bottom: -43rem; right: -48rem; }
+  .ambient-grid { background-size: 48px 48px; }
+  nav { font-size: 16px; }
+  .education-strip { grid-template-columns: 1fr; gap: 16px; }
+  .education-award { border-left: 0; border-top: 1px solid #cbb7dd; padding: 14px 0 0; }
+  .education-award > p:last-child { font-size: 21px; }
+  .cdr-review-note { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; padding-top: 18px; }
+}
+@media (prefers-reduced-motion: reduce) { .ambient-orb { animation: none; will-change: auto; } .portrait-motion { display: none; } }

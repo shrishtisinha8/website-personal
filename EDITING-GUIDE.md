@@ -16,6 +16,7 @@ The current résumé file is `public/assets/Resume_ShrishtiSinha_.pdf`. Replace 
 | `index.html` | Main headline, navigation labels, section introductions, and interests |
 | `styles.css` | Main layout, colors, and text sizes |
 | `portrait.css` | Portrait/logo sizing and styles for new work and writing |
+| `theme.css` | Section contrast, education layout, and the optional moving background |
 | `app.js` | Navigation and the code that displays your editable content |
 | `assets/` | Your illustration, logo, PDF résumé, and other files |
 
@@ -100,3 +101,10 @@ Upload the updated `public` folder to the existing project on your host. Replaci
 Overleaf is a LaTeX document editor. Keep the website's HTML, CSS, and JavaScript on a website host. You can create your résumé in Overleaf, compile it, then download the PDF. Save the downloaded file as `public/assets/resume.pdf` and set `resumeUrl` as shown above. Re-upload your website folder whenever you replace the PDF; Overleaf edits do not automatically update the website.
 
 [Overleaf overview](https://docs.overleaf.com/getting-started/how-do-i-use-overleaf) · [PDF download instructions](https://docs.overleaf.com/managing-projects-and-files/downloading-a-project)
+
+
+## Education, CDR familiarity and the background
+
+The compact education and INSPIRE Scholarship section is in `public/index.html`, under `education`. The CDR project-review familiarity text is under `cdr-review-title` in the same file. Keep specific standards and experience claims limited to those you can support.
+
+Section colors and the ambient introduction background are in `public/theme.css`. Visitors can pause the background; it stays still automatically if their device requests reduced motion. To disable the animation for everyone, add `.ambient-orb { animation: none; }` at the end of that file.
