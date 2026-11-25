@@ -164,24 +164,8 @@ if (posts.length) {
 }
 
 
-// Keep ambient motion optional and respect the visitor's system preference.
-const backgroundToggle = document.getElementById('background-toggle');
-const heroStage = document.querySelector('.hero-stage');
-if (backgroundToggle && heroStage) {
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const syncMotionControl = () => { backgroundToggle.hidden = reducedMotion.matches; };
-  syncMotionControl();
-  reducedMotion.addEventListener('change', syncMotionControl);
-  backgroundToggle.addEventListener('click', () => {
-    const paused = backgroundToggle.getAttribute('aria-pressed') !== 'true';
-    heroStage.dataset.motion = paused ? 'paused' : 'playing';
-    backgroundToggle.setAttribute('aria-pressed', String(paused));
-    backgroundToggle.textContent = paused ? 'Resume background' : 'Pause background';
-  });
-}
-
-
 // Text labels stay clear; a shared visual cue marks links that open elsewhere.
 document.querySelectorAll('a[target="_blank"]').forEach(link => {
   if (!link.hasAttribute('title')) link.title = 'Opens in a new tab';
 });
+

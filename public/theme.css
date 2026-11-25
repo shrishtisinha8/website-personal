@@ -1,21 +1,10 @@
-/* Clear section changes, with a quiet ambient background for the introduction. */
+/* Clear section changes and a plain lavender introduction. */
 body { font-size: 16px; background: #fcfbfe; }
 .site-header { background: rgba(252, 251, 254, .96); }
-.hero-stage { position: relative; isolation: isolate; overflow: hidden; background: #f3eefb; }
-.hero-atmosphere { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: -1; }
-.ambient-orb { position: absolute; width: 68rem; height: 68rem; border-radius: 50%; will-change: transform; }
-.orb-one { top: -48rem; left: -13rem; background: radial-gradient(circle, #b28bdb99 0, #d8c4ef66 42%, transparent 68%); animation: drift-one 24s ease-in-out infinite alternate; }
-.orb-two { right: -34rem; bottom: -47rem; background: radial-gradient(circle, #9670cc88 0, #c6afe84d 43%, transparent 68%); animation: drift-two 28s ease-in-out infinite alternate; }
-.ambient-grid { position: absolute; inset: 0; opacity: .2; background-image: linear-gradient(#9e88b12e 1px, transparent 1px), linear-gradient(90deg, #9e88b12e 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(90deg, transparent 15%, #000 100%); }
+.hero-stage { background: #f3eefb; }
 .hero { position: relative; padding-block: 44px 32px; }
 .hero-description { color: #51435f; }
 .photo-art .portrait-frame { background: #ffffffa6; border-color: #baa6d0; box-shadow: 0 14px 44px #3d215012; }
-.portrait-motion { min-height: 30px; margin-top: 8px; text-align: right; }
-.motion-toggle { padding: 4px 0 4px 10px; background: transparent; border: 0; color: #5d426f; font-size: 14px; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
-.motion-toggle:hover { color: #351a50; }
-.hero-stage[data-motion="paused"] .ambient-orb { animation-play-state: paused; }
-@keyframes drift-one { from { transform: translate(-3rem, 0) scale(1); } to { transform: translate(18rem, 9rem) scale(1.08); } }
-@keyframes drift-two { from { transform: translate(0, 0) scale(1); } to { transform: translate(-18rem, -7rem) scale(1.12); } }
 .skills-ribbon { background: #e3d6f2; color: #382047; border-color: #c4afd7; }
 .about { background: #fcfbfe; }
 .education-strip { grid-column: 1 / -1; display: grid; grid-template-columns: 1.6fr 1fr; gap: 22px; align-items: center; padding: 20px 24px; background: #f0e9f8; border: 1px solid #d4c3e4; border-radius: 10px; }
@@ -60,16 +49,12 @@ body { font-size: 16px; background: #fcfbfe; }
 @media (max-width: 850px) { nav { gap: 12px; } .nav-contact { padding-inline: 10px; } .education-strip { grid-template-columns: 1.6fr 1fr; padding: 20px; } .education-award { padding-left: 20px; } }
 @media (max-width: 680px) {
   .hero { padding-block: 28px 20px; }
-  .orb-one { top: -41rem; left: -40rem; }
-  .orb-two { bottom: -43rem; right: -48rem; }
-  .ambient-grid { background-size: 48px 48px; }
   nav { font-size: 16px; }
   .education-strip { grid-template-columns: 1fr; gap: 16px; }
   .education-award { border-left: 0; border-top: 1px solid #cbb7dd; padding: 14px 0 0; }
   .education-award .award-title { font-size: 21px; }
   .roles-interest-note { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; padding-top: 18px; }
 }
-@media (prefers-reduced-motion: reduce) { .ambient-orb { animation: none; will-change: auto; } .portrait-motion { display: none; } }
 
 /* Keep link destinations visibly distinct from ordinary text. */
 a[href]:not(.button):not(.brand) {
@@ -103,6 +88,7 @@ a[href^="mailto:"]::after {
 a.text-link::after, a.button::after { margin-left: 0; }
 .text-link:hover, nav a:hover { text-decoration-thickness: 2px; }
 .contact-links a { color: #5b2f83; }
+
 
 
 

@@ -16,7 +16,7 @@ The current résumé file is `public/assets/Resume_ShrishtiSinha_.pdf`. Replace 
 | `index.html` | Main headline, navigation labels, section introductions, and interests |
 | `styles.css` | Main layout, colors, and text sizes |
 | `portrait.css` | Portrait/logo sizing and styles for new work and writing |
-| `theme.css` | Section contrast, education layout, and the optional moving background |
+| `theme.css` | Section contrast, education layout, and the static introduction background |
 | `app.js` | Navigation and the code that displays your editable content |
 | `assets/` | Your illustration, logo, PDF résumé, and other files |
 
@@ -107,4 +107,5 @@ Overleaf is a LaTeX document editor. Keep the website's HTML, CSS, and JavaScrip
 
 The education, final-year master’s thesis and INSPIRE Scholarship details are in `public/index.html`, under `education`. The next-role interests are under `next-roles-title` in the same file. The dated University College London entry also identifies the master’s thesis and research group. Keep ranks and experience claims accurate.
 
-Section colors and the ambient introduction background are in `public/theme.css`. Visitors can pause the background; it stays still automatically if their device requests reduced motion. To disable the animation for everyone, add `.ambient-orb { animation: none; }` at the end of that file.
+Section colors and the plain lavender introduction background are in `public/theme.css`. The introduction has no animated background or pause/resume control.
+
