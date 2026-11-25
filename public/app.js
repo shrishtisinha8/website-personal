@@ -35,27 +35,23 @@ function safeUrl(value, kind) {
     return url;
   } catch { return null; }
 }
-function enableLink(id, url, label, symbol) {
+function enableLink(id, url, label) {
   const link = document.getElementById(id);
   link.href = url.href;
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
   link.removeAttribute('aria-disabled');
   link.removeAttribute('tabindex');
-  link.replaceChildren(document.createTextNode(label + ' '));
-  const arrow = document.createElement('span');
-  arrow.setAttribute('aria-hidden', 'true');
-  arrow.textContent = symbol;
-  link.append(arrow);
+  link.textContent = label;
 }
 const calendlyUrl = safeUrl(content.calendlyUrl, 'calendly');
 if (calendlyUrl) {
-  enableLink('calendly-link', calendlyUrl, 'Book a conversation', '↗');
+  enableLink('calendly-link', calendlyUrl, 'Book a conversation');
   document.getElementById('booking-note').textContent = 'Choose a time on Calendly. Opens in a new tab.';
 }
 const resumeUrl = safeUrl(content.resumeUrl, 'resume');
 if (resumeUrl) {
-  enableLink('resume-link', resumeUrl, 'View my résumé', '');
+  enableLink('resume-link', resumeUrl, 'View my résumé');
   document.getElementById('resume-description').textContent = 'Roles, research and results, with the details behind my work.';
 }
 const contacts = document.getElementById('contact-links');
@@ -69,7 +65,7 @@ function appendContact(label, href, external) {
 }
 if (typeof content.email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(content.email) && !/[?&#]/.test(content.email)) appendContact('Email me', 'mailto:' + content.email, false);
 const linkedinUrl = safeUrl(content.linkedinUrl, 'linkedin');
-if (linkedinUrl) appendContact('LinkedIn ↗', linkedinUrl.href, true);
+if (linkedinUrl) appendContact('LinkedIn', linkedinUrl.href, true);
 
 // Render the editable text with textContent, so it stays plain text.
 if (Array.isArray(content.aboutParagraphs) && content.aboutParagraphs.some(p => typeof p === 'string' && p.trim())) {
@@ -155,7 +151,7 @@ if (posts.length) {
     if (url) {
       const link = document.createElement('a');
       link.className = 'text-link';
-      link.textContent = 'Read the full piece ↗';
+      link.textContent = 'Read the full piece';
       link.href = url.href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
@@ -183,3 +179,9 @@ if (backgroundToggle && heroStage) {
     backgroundToggle.textContent = paused ? 'Resume background' : 'Pause background';
   });
 }
+
+
+// Text labels stay clear; a shared visual cue marks links that open elsewhere.
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+  if (!link.hasAttribute('title')) link.title = 'Opens in a new tab';
+});
