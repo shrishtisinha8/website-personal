@@ -6,7 +6,7 @@ window.siteContent = {
   "email": "shrishtisinha84@gmail.com",
   "linkedinUrl": "https://www.linkedin.com/in/shrishti-sinha/",
   "aboutParagraphs": [
-    "My background spans banking analytics, carbon removal, and research on climate, land use and biodiversity. I’m interested in research, strategy and growth for climate action.",
+    "My background spans banking analytics, carbon removal, and research on climate, land use and biodiversity. I’m interested in research, strategy and growth across sectors.",
     "At Wells Fargo, I evaluated fraud models and worked on model risk and documentation. At University College London, I modelled the impacts of land use and climate change on biodiversity; at Max Planck, I supported population-dynamics research.",
     "I’m currently contributing at CDR.fyi, developing high-quality market reports and resources for the durable CDR industry.",
     "Outside work: singing, practising guitar and drums, exploring new instruments, learning music production, and trying new recipes and cuisines."
@@ -27,4 +27,5 @@ window.siteContent = {
   ],
   "writing": []
 };
+
 
