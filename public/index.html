@@ -12,7 +12,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=5">
   <link rel="stylesheet" href="styles.css?v=3">
   <link rel="stylesheet" href="portrait.css?v=7">
-  <link rel="stylesheet" href="theme.css?v=6">
+  <link rel="stylesheet" href="theme.css?v=7">
   <script src="content.js?v=11" defer></script>
   <script src="app.js?v=8" defer></script>
 </head>
@@ -80,15 +80,18 @@
     </section>
     <section class="work-section" id="work" aria-labelledby="work-title"><div class="section-shell section-spacing">
       <div class="section-top"><div><p class="eyebrow">02 / WORK & RÉSUMÉ</p><h2 id="work-title">Work, research<br><em>& contributions.</em></h2></div><p class="section-aside">Selected roles, research and writing.<br>Specific contributions and results.</p></div>
-      <div class="work-layout"><div class="work-rows">
-        <details class="work-row" open>
-          <summary><span class="row-number">01</span><span>Analytics & risk modelling</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-          <div class="row-body">
-            <article class="portfolio-entry experience-entry">
+      <div class="work-layout work-overview">
+        <aside class="resume-card resume-summary" aria-labelledby="resume-title">
+        <div class="resume-copy"><p class="eyebrow">EXPERIENCE &amp; CONTRIBUTIONS</p><h3 id="resume-title">My résumé</h3><p id="resume-description">Roles, research and results, with the details behind my work.</p></div>
+        <a class="button button-outline" id="resume-link" aria-disabled="true" tabindex="-1">View my résumé</a>
+      </aside>
+        <div class="experience-grid">
+            <article class="portfolio-entry experience-entry experience-card">
+              <p class="experience-category">Analytics &amp; risk modelling</p>
               <h3>Wells Fargo</h3>
               <p class="experience-meta"><span class="experience-role">Quantitative Analytics Specialist</span><span class="experience-dates">July 2024 – September 2026</span></p>
-              <p class="experience-summary">Led analysis of five vendor models and selected decision thresholds, enabling a 14% improvement in fraud detection accuracy at lower false-positive rates.</p>
-              <p class="experience-summary">Built operational and aggregate loss models, improving risk visibility by 15–20%. Introduced user acceptance testing workflows that reduced deployment-related issues by 25–30% and improved rollout efficiency by 20%.</p>
+              <p>Led analysis of five vendor models and selected decision thresholds, enabling a 14% improvement in fraud detection accuracy at lower false-positive rates.</p>
+              <p>Built operational and aggregate loss models, improving risk visibility by 15–20%. Introduced user acceptance testing workflows that reduced deployment-related issues by 25–30% and improved rollout efficiency by 20%.</p>
               <details class="experience-detail" id="wells-fargo-detail">
                 <summary><span>Project context, approach &amp; contributions</span><span class="detail-toggle" aria-hidden="true">+</span></summary>
                 <div class="experience-detail-body">
@@ -109,7 +112,8 @@
                 </div>
               </details>
             </article>
-            <article class="portfolio-entry experience-entry">
+            <article class="portfolio-entry experience-entry experience-card">
+              <p class="experience-category">Analytics &amp; risk modelling</p>
               <h3>Wells Fargo</h3>
               <p class="experience-meta"><span class="experience-role">Data Analyst Intern</span><span class="experience-dates">May – July 2023</span></p>
               <p>Implemented Pluto–Tasche and logistic-regression approaches to estimate probability of default in low-default portfolios, using Python, Excel and R.</p>
@@ -127,12 +131,8 @@
                 </div>
               </details>
             </article>
-          </div>
-        </details>
-        <details class="work-row">
-          <summary><span class="row-number">02</span><span>Biodiversity research</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-          <div class="row-body">
-            <article class="portfolio-entry experience-entry">
+            <article class="portfolio-entry experience-entry experience-card">
+              <p class="experience-category">Biodiversity research</p>
               <h3>University College London</h3>
               <p class="experience-meta"><span class="experience-role">Visiting Researcher · Final-year master’s thesis</span><span class="experience-dates">August 2023 – June 2024</span></p>
               <p>Modelled the impacts of climate change and land use on biodiversity for my final-year master’s thesis with the Centre for Biodiversity and Environment Research.</p>
@@ -152,34 +152,31 @@
                 </div>
               </details>
             </article>
-            <article class="portfolio-entry experience-entry">
+            <article class="portfolio-entry experience-entry experience-card">
+              <p class="experience-category">Biodiversity research</p>
               <h3>Max Planck Institute for Evolutionary Biology</h3>
               <p class="experience-meta"><span class="experience-role">Research Intern</span><span class="experience-dates">August – October 2022</span></p>
               <p>Supported research on population dynamics and herbicide-resistance evolution in perennial weeds.</p>
             </article>
-          </div>
-        </details>
-        <details class="work-row">
-          <summary><span class="row-number">03</span><span>Climate contributions</span><span class="expand-icon" aria-hidden="true">+</span></summary>
-          <div class="row-body">
-            <article class="portfolio-entry experience-entry">
+            <article class="portfolio-entry experience-entry experience-card">
+              <p class="experience-category">Climate contributions</p>
               <h3>CDR.fyi</h3>
               <p class="experience-meta"><span class="experience-role">Growth team volunteer</span><span class="experience-dates">Since June 2026</span></p>
               <p>Co-authored CDR.fyi’s blog on spot, forward, pre-purchase and offtake structures, explaining payment timing, delivery commitments and buyer risks.</p>
               <p>Currently contributing to market reports on durable carbon removal and supporting CDR.fyi’s growth strategy and content ideation.</p>
             </article>
-            <article class="portfolio-entry experience-entry">
+            <article class="portfolio-entry experience-entry experience-card">
+              <p class="experience-category">Climate contributions</p>
               <h3>Net Zero Tracker</h3>
               <p class="experience-meta"><span class="experience-role">Volunteer contributor</span><span class="experience-dates">August – September 2025</span></p>
               <p>Helped maintain Net Zero Tracker’s public database of net-zero targets.</p>
             </article>
-          </div>
-        </details>
-        <details class="work-row" id="work-portfolio" open><summary><span class="row-number">04</span><span>Blogs</span><span class="expand-icon" aria-hidden="true">+</span></summary><div class="row-body"><p>Blog posts on carbon markets, climate and business strategy.</p></div></details>
-      </div><aside class="resume-card resume-summary" aria-labelledby="resume-title">
-        <div class="resume-copy"><p class="eyebrow">EXPERIENCE &amp; CONTRIBUTIONS</p><h3 id="resume-title">My résumé</h3><p id="resume-description">Roles, research and results, with the details behind my work.</p></div>
-        <a class="button button-outline" id="resume-link" aria-disabled="true" tabindex="-1">View my résumé</a>
-      </aside></div>
+        </div>
+        <section class="work-blogs" id="work-portfolio" aria-labelledby="work-blogs-title">
+          <h3 id="work-blogs-title">Blogs</h3>
+          <div class="row-body"><p>Blog posts on carbon markets, climate and business strategy.</p></div>
+        </section>
+      </div>
     </div></section>
     <div class="focus-stage">
     <section class="interests section-shell section-spacing" id="interests" aria-labelledby="interests-title">
@@ -206,6 +203,7 @@
   </div>
 </body>
 </html>
+
 
 
 

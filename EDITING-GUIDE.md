@@ -109,3 +109,12 @@ The education, final-year master’s thesis and INSPIRE Scholarship details are 
 
 Section colors and the plain lavender introduction background are in `public/theme.css`. The introduction has no animated background or pause/resume control.
 
+
+
+## Work overview cards
+
+All six experience entries are visible together in `public/index.html`, inside `experience-grid`. Each `experience-card` contains the employer, role, dates, a short contribution summary and any optional `experience-detail` dropdown. Edit those entries to update your work history.
+
+The Blogs section is below the experience cards. Its entries still come from `work` in `public/content.js`.
+
+The shared work-card font and layout rules are at the end of `public/theme.css`. Contribution summaries, expanded detail text and blog descriptions use `1.125rem` (18px at the browser’s default setting).
