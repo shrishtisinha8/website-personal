@@ -93,3 +93,10 @@ a.text-link::after, a.button::after { margin-left: 0; }
 
 
 
+
+
+/* Larger text for the Wells Fargo role's main contribution summary. */
+.row-body .experience-entry > p.experience-summary {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
