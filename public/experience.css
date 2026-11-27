@@ -1,0 +1,85 @@
+/* A portrait-led introduction with a continuous, moving line of circles. */
+.landing-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #faf5ff;
+  background: radial-gradient(ellipse at 82% 22%, #422654 0%, #241332 44%, #180f24 78%);
+}
+.landing-backdrop { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: -1; }
+.landing-backdrop::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #180f244d 0%, transparent 72%); }
+.circle-stream { position: absolute; top: 49%; left: -14%; width: 128%; overflow: hidden; transform: rotate(-14deg); opacity: .85; }
+.circle-track { display: flex; width: max-content; animation: circle-flow 42s linear infinite; will-change: transform; }
+.circle-set { display: flex; align-items: center; gap: 26px; padding-right: 26px; flex: none; }
+.kinetic-circle { display: block; flex: none; width: 132px; height: 132px; border: 1px solid #c49ce47a; border-radius: 50%; background: #a270cf08; }
+.kinetic-circle:nth-child(4n + 2) { border-color: #d8bdf1ad; background: #b889df18; }
+.kinetic-circle:nth-child(4n) { border-color: #9f6ec970; background: #b889df0d; }
+.landing-stage[data-motion="paused"] .circle-track { animation-play-state: paused; }
+@keyframes circle-flow { from { transform: translate3d(0,0,0); } to { transform: translate3d(-50%,0,0); } }
+.hero.landing-hero {
+  position: relative;
+  min-height: calc(100vh - 91px);
+  min-height: calc(100svh - 91px);
+  grid-template-columns: 1.08fr .92fr;
+  gap: clamp(32px, 5vw, 76px);
+  padding-block: 76px 104px;
+}
+.landing-hero .hero-copy { position: relative; z-index: 1; }
+.landing-hero .eyebrow { color: #d0b8e1; font-size: 14px; letter-spacing: 2px; margin-bottom: 24px; }
+.landing-hero h1 { color: #faf5ff; font-size: clamp(64px, 8.4vw, 112px); line-height: .99; font-weight: 400; letter-spacing: -3px; margin-bottom: 25px; }
+.landing-hero h1 em { color: #d5b3ef; }
+.landing-hero .landing-description { color: #eadff2; font-size: 20px; line-height: 1.6; margin: 0; max-width: 32ch; }
+.landing-hero .hero-actions { margin-top: 28px; }
+.landing-hero .button-primary { min-height: 52px; padding: 14px 24px; background: #dfc5f5; color: #281737; border-color: #dfc5f5; font-size: 16px; }
+.landing-hero .button-primary:hover { color: #281737; background: #f3e4ff; border-color: #f3e4ff; transform: translateY(-2px); }
+.hero-art.landing-portrait { position: relative; width: min(100%, 440px); justify-self: end; margin: 0; padding-top: 0; }
+.landing-portrait::before { content: ''; position: absolute; inset: -20px; border-radius: 50%; border: 1px solid #c2a0df35; pointer-events: none; }
+.photo-art.landing-portrait .portrait-frame { padding: 12px; border-color: #ad89c8; background: #493058; box-shadow: 0 28px 80px #08040f66; }
+.landing-portrait .portrait-image { border-radius: 50%; }
+.landing-footer { position: absolute; bottom: 24px; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.landing-scroll { display: inline-flex; align-items: center; gap: 12px; color: #decaed; font-size: 14px; line-height: 1.5; }
+.scroll-orbit { display: inline-block; width: 17px; height: 17px; border: 1px solid #cda8e9; border-radius: 50%; }
+.motion-toggle { color: #eadff2; font-size: 14px; line-height: 1.4; border: 1px solid #a382bd70; border-radius: 100px; padding: 8px 14px; background: #ffffff08; cursor: pointer; }
+.motion-toggle:hover { background: #ffffff15; border-color: #c8a8df; }
+.landing-stage a:focus-visible, .landing-stage button:focus-visible { outline-color: #e3c8fc; }
+
+/* Content keeps its normal reading order and enters as it reaches the viewport. */
+.scroll-reveal { opacity: 0; transform: translate3d(0,28px,0); transition: opacity .75s ease, transform .75s cubic-bezier(.2,.7,.2,1); transition-delay: var(--reveal-delay,0ms); }
+.scroll-reveal.is-visible, .scroll-reveal:focus-within { opacity: 1; transform: none; }
+
+/* One lightweight emoji follows the precise pointer and never blocks a click. */
+.cursor-emoji { position: fixed; left: 0; top: 0; z-index: 1000; pointer-events: none; opacity: 0; transform: translate3d(var(--cursor-x,-100px),var(--cursor-y,-100px),0); transition: opacity .18s ease; user-select: none; }
+.cursor-emoji.is-active { opacity: .88; }
+.cursor-symbol { display: block; font: 20px/1 'Apple Color Emoji','Segoe UI Emoji',sans-serif; transform: translate(-50%,-50%); filter: drop-shadow(0 3px 8px #6e3b9d40); }
+.cursor-emoji.is-popping .cursor-symbol { animation: cursor-pop .4s ease-out; }
+@keyframes cursor-pop { 0% { transform: translate(-50%,-50%) scale(.45); } 55% { transform: translate(-50%,-50%) scale(1.28); } 100% { transform: translate(-50%,-50%) scale(1); } }
+
+@media (max-width: 850px) {
+  .hero.landing-hero { min-height: calc(100svh - 77px); gap: 34px; padding-block: 64px 92px; }
+  .landing-hero h1 { font-size: 72px; }
+  .landing-hero .eyebrow { letter-spacing: 1.4px; }
+  .kinetic-circle { width: 108px; height: 108px; }
+  .circle-set { gap: 22px; padding-right: 22px; }
+}
+@media (max-width: 680px) {
+  .hero.landing-hero { min-height: calc(100vh - 73px); min-height: calc(100svh - 73px); grid-template-columns: 1fr; gap: 28px; padding-block: 38px 92px; text-align: center; }
+  .landing-hero .eyebrow { font-size: 13px; letter-spacing: 1.4px; margin-bottom: 16px; }
+  .landing-hero h1 { font-size: clamp(60px, 15vw, 76px); letter-spacing: -2px; margin-bottom: 18px; }
+  .landing-hero .landing-description { font-size: 18px; margin-inline: auto; }
+  .landing-hero .hero-actions { justify-content: center; margin-top: 20px; }
+  .hero-art.landing-portrait { width: min(64vw, 260px); margin-inline: auto; justify-self: center; }
+  .landing-portrait::before { inset: -12px; }
+  .photo-art.landing-portrait .portrait-frame { padding: 9px; }
+  .landing-footer { bottom: 22px; gap: 10px; }
+  .landing-scroll, .motion-toggle { font-size: 14px; }
+  .motion-toggle { padding: 8px 12px; }
+  .circle-stream { top: 61%; left: -25%; width: 150%; transform: rotate(-18deg); }
+  .kinetic-circle { width: 84px; height: 84px; }
+  .circle-set { gap: 18px; padding-right: 18px; }
+}
+@media (hover: none), (pointer: coarse) { .cursor-emoji { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .landing-stage:not([data-motion="running"]) .circle-track { animation-play-state: paused; }
+  .scroll-reveal { opacity: 1; transform: none; transition: none; }
+  .cursor-emoji { display: none; }
+}

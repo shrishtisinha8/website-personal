@@ -16,7 +16,9 @@ The current résumé file is `public/assets/Resume_ShrishtiSinha_.pdf`. Replace 
 | `index.html` | Main headline, navigation labels, section introductions, and interests |
 | `styles.css` | Main layout, colors, and text sizes |
 | `portrait.css` | Portrait/logo sizing and styles for new work and writing |
-| `theme.css` | Section contrast, education layout, and the static introduction background |
+| `theme.css` | Section contrast, education layout, and work cards |
+| `experience.css` | Landing screen, moving circles, scroll reveals and the purple cursor effect |
+| `experience.js` | Motion controls, section reveals and cursor interactions |
 | `app.js` | Navigation and the code that displays your editable content |
 | `assets/` | Your illustration, logo, PDF résumé, and other files |
 
@@ -107,7 +109,7 @@ Overleaf is a LaTeX document editor. Keep the website's HTML, CSS, and JavaScrip
 
 The education, final-year master’s thesis and INSPIRE Scholarship details are in `public/index.html`, under `education`. The next-role interests are under `next-roles-title` in the same file. The dated University College London entry also identifies the master’s thesis and research group. Keep ranks and experience claims accurate.
 
-Section colors and the plain lavender introduction background are in `public/theme.css`. The introduction has no animated background or pause/resume control.
+Section and work-card colors are in `public/theme.css`. The portrait-led landing screen and moving circles are styled in `public/experience.css`.
 
 
 
@@ -118,3 +120,10 @@ All six experience entries are visible together in `public/index.html`, inside `
 The Blogs section is below the experience cards. Its entries still come from `work` in `public/content.js`.
 
 The shared work-card font and layout rules are at the end of `public/theme.css`. Contribution summaries, expanded detail text and blog descriptions use `1.125rem` (18px at the browser’s default setting).
+
+
+## Landing screen and scroll experience
+
+The greeting, portrait and “Explore my work” button are at the start of `public/index.html`, under `landing-stage`. The button goes straight to the work cards; “Scroll to explore” starts with the About section. Your background and professional interests are editable in `public/content.js` as before.
+
+The moving line of circles, section reveal styles and purple cursor emoji are in `public/experience.css`. Their controls and behaviour are in `public/experience.js`. The animation can be paused, and visitors who prefer reduced motion get a still background unless they choose to play it. The cursor emoji is limited to mouse/precise pointers; touch and keyboard navigation keep their standard behaviour. All content remains readable if the enhancement script is unavailable.
